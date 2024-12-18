@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SteamFuck</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e2e;
+            color: #c3c4d1;
+        }
+        header {
+            background-color: #282a36;
+            color: #8be9fd;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .game-card {
+            background: #2e2e3e;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .game-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+        }
+        .game-card img {
+            width: 100%;
+            height: auto;
+        }
+        .game-info {
+            padding: 1rem;
+        }
+        .game-info h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+            color: #8be9fd;
+        }
+        .game-info p {
+            font-size: 0.9rem;
+            color: #bd93f9;
+        }
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #bd93f9;
+            color: #1e1e2e;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .download-button:hover {
+            background-color: #8be9fd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SteamFuck</h1>
+        <p>Your hub for free games with a sleek, modern design!</p>
+    </header>
+
+    <div class="container">
+        <div class="game-grid">
+            <!-- Game Cards -->
+            <div class="game-card" onclick="loadGameDetails('Elden Ring Deluxe Edition Free Download (v1.16)', 'elden.jpg', 'The new fantasy action RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.', 'https://gofile.io/d/S683NC');">
+                <img src="elden.jpg" alt="Game 1">
+                <div class="game-info">
+                    <h3>Elden Ring Deluxe Edition Free Download (v1.16)</h3>
+                    <p>The new fantasy action RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.</p>
+                </div>
+            </div>
+            <div class="game-card" onclick="loadGameDetails('Forza Horizon 5 Premium Edition Free Download (v1.671.065.0)', 'forza5.jpg', 'Your Ultimate Horizon Adventure awaits Explore the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world’s greatest cars. Lead breathtaking expeditions across the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world’s greatest cars. Explore a world of striking contrast and beauty.', 'https://gofile.io/d/DvH9EY');">
+                <img src="forza5.jpg" alt="Game 1">
+                <div class="game-info">
+                    <h3>Forza Horizon 5 Premium Edition Free Download (v1.671.065.0)</h3>
+                    <p>Your Ultimate Horizon Adventure awaits Explore the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world’s greatest cars. Lead breathtaking expeditions across the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world’s greatest cars. Explore a world of striking contrast and beauty.</p>
+                </div>
+            </div>
+            <div class="game-card" onclick="loadGameDetails('The Sims 4 Free Download (v1.110.311.1020)', 'sims4.jpg', 'Imagine a world where you’re the creator. In The Sims 4, you can design unique Sims, build dream homes, and experience their lives in a way that’s entirely up to you.', 'https://gofile.io/d/dnXf4r');">
+                <img src="sims4.jpg" alt="Game 1">
+                <div class="game-info">
+                    <h3>The Sims 4 Free Download (v1.110.311.1020)</h3>
+                    <p>Imagine a world where you’re the creator. In The Sims 4, you can design unique Sims, build dream homes, and experience their lives in a way that’s entirely up to you.</p>
+                </div>
+            </div>
+            <div class="game-card" onclick="loadGameDetails('BeamNG.drive Free Download (v0.33.1.0)', 'beamng.jpg', 'BeamNG.drive is an incredibly realistic driving game with near-limitless possibilities. Our soft-body physics engine simulates every component of a vehicle in real time, resulting in true-to-life behavior. With years of meticulous design, intensive research and experience, the simulation authentically recreates the excitement of real world driving. Soft-body physics: The BeamNG physics engine is at the core of the most detailed and authentic vehicle simulation you’ve ever seen in a game.', 'https://gofile.io/d/r8Lcgu');">
+                <img src="beamng.jpg" alt="Game 1">
+                <div class="game-info">
+                    <h3>BeamNG.drive Free Download (v0.33.1.0)</h3>
+                    <p>BeamNG.drive is an incredibly realistic driving game with near-limitless possibilities. Our soft-body physics engine simulates every component of a vehicle in real time, resulting in true-to-life behavior. With years of meticulous design, intensive research and experience, the simulation authentically recreates the excitement of real world driving. Soft-body physics: The BeamNG physics engine is at the core of the most detailed and authentic vehicle simulation you’ve ever seen in a game.</p>
+                </div>
+            </div>
+             <div class="game-card" onclick="loadGameDetails('Red Dead Redemption 2 Free Download (Build 1491.50)', 'rdr2.jpg', 'Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive. As deepening internal divisions threaten to tear the gang apart, Arthur must make a choice between his own ideals and loyalty to the gang who raised him. Now featuring additional Story Mode content and a fully-featured Photo Mode, Red Dead Redemption 2 also includes free access to the shared living world of Red Dead Online, where players take on an array of roles to carve their own unique path on the frontier as they track wanted criminals as a Bounty Hunter', 'https://gofile.io/d/KQWy8I');">
+                <img src="rdr2.jpg" alt="Game 1">
+                <div class="game-info">
+                    <h3>Red Dead Redemption 2 Free Download (Build 1491.50)</h3>
+                    <p>Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive. As deepening internal divisions threaten to tear the gang apart, Arthur must make a choice between his own ideals and loyalty to the gang who raised him. Now featuring additional Story Mode content and a fully-featured Photo Mode, Red Dead Redemption 2 also includes free access to the shared living world of Red Dead Online, where players take on an array of roles to carve their own unique path on the frontier as they track wanted criminals as a Bounty Hunter</p>
+                </div>
+            </div> 
+             <div class="game-card" onclick="loadGameDetails('Cyberpunk 2077 Free Download (v2.2)', 'cyberpunk2077.jpg', 'Cryberpunk 2k77 is an open-action-adventure set in Night City, where you play as a cryberpunk mercenary fighting for survival. Improved with all-new free extra content, you can now personalize your character and playstyle as you take on jobs, establish a reputation, and acquire improvements. The relationships you form and the decisions you make will impact both the tale and the world around you. Legends are created here. What will yours be?', 'https://datanodes.to/axiexhdogrb6/Cbpunk-2ksevenseven-SteamRIP.com.rar');">
+                <img src="cyberpunk2077.jpg" alt="Game 1">
+                <div class="game-info">
+                    <h3>Cyberpunk 2077 Free Download (v2.2)</h3>
+                    <p>Cryberpunk 2k77 is an open-action-adventure set in Night City, where you play as a cryberpunk mercenary fighting for survival. Improved with all-new free extra content, you can now personalize your character and playstyle as you take on jobs, establish a reputation, and acquire improvements. The relationships you form and the decisions you make will impact both the tale and the world around you. Legends are created here. What will yours be?</p>
+                </div>
+            </div> 
+             <div class="game-card" onclick="loadGameDetails('Grand Theft Auto V / GTA 5 Free Download (v1.0.3337/1.69)', 'gta5.jpg', 'When a young street hustler, a retired bank robber and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody, least of all each other.', 'https://gofile.io/d/Oni1Lh');">
+                <img src="gta5.jpg" alt="Game 1">
+                <div class="game-info">
+                    <h3>Grand Theft Auto V / GTA 5 Free Download (v1.0.3337/1.69)</h3>
+                    <p>When a young street hustler, a retired bank robber and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody, least of all each other.</p>
+                </div>
+            </div> 
+            <!-- Add more game cards here -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 <a href="#">SteamFuck</a>. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function loadGameDetails(title, image, description, downloadLink) {
+            // Dynamically create the game details page
+            document.body.innerHTML = `
+                <h1>${title}</h1>
+                <img src="${image}" alt="${title}" style="width: 50%; height: auto;">
+                <p>${description}</p>
+                <a href="${downloadLink}" class="download-button" target="_blank">Download Here</a>
+            `;
+        }
+    </script>
+</body>
+</html>
